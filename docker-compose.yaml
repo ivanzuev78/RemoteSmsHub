@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sms_hub:
+    container_name: sms_hub
+    build:
+      dockerfile: Dockerfile
+      target: build
+    environment:
+      - TG_TOKEN=1234567899:AA***
+      - TG_CHAT_ID=123456789
+    ports:
+      - "7837:8000"
